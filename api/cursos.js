@@ -1,20 +1,31 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const { Curso } = require("../models/index.js");
 
+router.get("/", async (req, res) => {
+    const cursos = await Curso.findAll();
+    res.json(cursos);
+});
 
+router.post("/", async (req, res) => {
+    try {
+        const { nome, descricao, cargaHoraria } = req.body; // Corrigido para "cargaHoraria"
 
-const listaDeCursos = [];
+        // Certifique-se de que o valor está sendo passado corretamente
+        if (!cargaHoraria) {
+            return res.status(400).send("O campo 'cargaHoraria' é obrigatório.");
+        }
 
-router.get("/", (req, res) => {
-    res.json(listaDeCursos); //retorna a lista de cursos em formato json
-  });
-  //serve para receber dados do front-end
-  router.post("/", (req, res) => {
-    const dados = req.body; //dados no formato json
-    //ou const dados = req.query  //dados no formato query string
-    console.log(dados);
-    listaDeCursos.push(dados); //adiciona os dados na lista de cursos
-    res.send("Curso adicionado com sucesso!");
-  });
+        await Curso.create({
+            nome: nome,
+            descricao: descricao,
+            cargaHoraria: cargaHoraria, // Certifique-se de que o nome está correto
+        });
 
-  module.exports = router;
+        res.send("Curso adicionado com sucesso!");
+    } catch (error) {
+        res.status(500).send("Erro ao adicionar curso: " + error.message);
+    }
+});
+
+module.exports = router;
