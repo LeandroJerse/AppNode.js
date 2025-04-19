@@ -1,0 +1,150 @@
+/* Modern and visually appealing CSS for index.html */
+
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9; /* Light gray background */
+    color: #333; /* Dark text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #343a40; /* Dark gray */
+    margin-top: 20px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #ffc107; /* Yellow underline */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Customizing the navbar */
+.navbar-custom {
+    background-color: #343a40; /* Dark background */
+    border-bottom: 2px solid #ffc107; /* Yellow border */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ffffff; /* White text */
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ffc107; /* Yellow on hover */
+}
+
+/* Customizing buttons */
+.btn-custom {
+    background-color: #ffc107; /* Yellow background */
+    color: #343a40; /* Dark text */
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+    color: #ffffff; /* White text */
+}
+
+/* Course container */
+#cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Course card styling */
+.curso {
+    background: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.curso h2 {
+    font-size: 1.8rem;
+    color: #343a40; /* Dark gray */
+    margin-bottom: 10px;
+}
+
+.curso p {
+    color: #555; /* Medium gray */
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.curso a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffc107; /* Yellow */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.curso a:hover {
+    color: #e0a800; /* Darker yellow */
+    text-decoration: underline;
+}
+
+/* Customizing footer */
+.footer-custom {
+    background-color: #343a40; /* Dark background */
+    color: #ffffff; /* White text */
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-custom a {
+    color: #ffc107; /* Yellow links */
+    text-decoration: none;
+}
+
+.footer-custom a:hover {
+    color: #e0a800; /* Darker yellow */
+    text-decoration: underline;
+}
+
+/* Customizing headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; /* Example font */
+    color: #343a40; /* Dark text */
+}
+
+/* Customizing cards */
+.card-custom {
+    border: 1px solid #ffc107; /* Yellow border */
+}
+
+.card-custom .card-header {
+    background-color: #ffc107; /* Yellow header */
+    color: #343a40; /* Dark text */
+}
+
+.card-custom .card-body {
+    background-color: #f8f9fa; /* Light background */
+}
+
+/* Customizing links */
+a {
+    color: #007bff; /* Default Bootstrap blue */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}

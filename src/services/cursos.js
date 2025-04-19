@@ -9,7 +9,11 @@ class CursoService {
   }
 
   async adicionar(cursoDTO){
+
     try {
+
+
+
       const { nome, descricao, cargaHoraria } = cursoDTO
 
       if (!nome || !cargaHoraria) {
@@ -27,8 +31,8 @@ class CursoService {
   }
 
   getCursoById(id) {
-    return this.cursos.find(curso => curso.id === parseInt(id));
+    return this.curso.find(curso => curso.id === parseInt(id));
   }
 }
 
-module.exports = CursoService
+export default CursoService;

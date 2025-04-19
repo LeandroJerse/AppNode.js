@@ -1,4 +1,4 @@
-const curso = (sequelize,DataTypes) => {
+const curso = (sequelize, DataTypes) => {
     const Curso = sequelize.define('Curso', {
         id: {
             type: DataTypes.INTEGER,
@@ -7,7 +7,11 @@ const curso = (sequelize,DataTypes) => {
         },
         nome: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: {
+                name: 'unique_nome',
+                msg: 'O nome do curso deve ser único.'
+            }
         },
         descricao: {
             type: DataTypes.STRING,
@@ -17,10 +21,10 @@ const curso = (sequelize,DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-    },{
-        tableName:'cursos',
-        timestamps:false //desabilita os campos createdAt e updatedAt
-    })
+    }, {
+        tableName: 'cursos',
+        timestamps: false // desabilita os campos createdAt e updatedAt
+    });
 
     return Curso;
 }

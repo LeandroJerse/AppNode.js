@@ -2,8 +2,11 @@ const express = require('express')
 const routes = require('./api/index')
 const {sequelize} = require('./models/index.js')
 const db = require('./models/index.js')
+const cors = require('cors')
+
 
 const app = express()
+app.use(cors()) //habilitar o cors para permitir requisições de outros domínios
 
 //pesquise localhost:3000 no navegador
 //ou use o postman para fazer requisições para o servidor
