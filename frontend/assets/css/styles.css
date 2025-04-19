@@ -148,3 +148,27 @@ a {
 a:hover {
     color: #0056b3; /* Darker blue on hover */
 }
+
+/* Navigation button styling */
+.navigation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation .btn {
+    display: inline-block;
+    background-color: #ffc107; /* Yellow background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation .btn:hover {
+    background-color: #e0a800; /* Darker yellow */
+}
